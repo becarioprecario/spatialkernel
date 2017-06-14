@@ -119,6 +119,17 @@ spseg.matrix <- function(pts, marks, h, opt=2, ntest=100, poly=NULL,
 #' @export
 plotcv <- function(obj, ...) plot(obj$h, obj$cv, type="l", ...)
 
+#' @importFrom ggplot2 ggplot aes geom_line
+#' @export
+ggplotcv <- function(obj, ...) {
+  d <- with(
+    obj,
+    data.frame(h = h, cv = cv)
+  )
+  ggplot(d, aes(h, cv)) +
+    geom_line()
+}
+
 #' @rdname spseg
 #' @export
 plotphat <- function(obj, types=unique(obj$marks), sup=TRUE, col=risk.colors(10), 
