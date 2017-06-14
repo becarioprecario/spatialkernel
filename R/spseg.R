@@ -117,9 +117,12 @@ spseg.matrix <- function(pts, marks, h, opt=2, ntest=100, poly=NULL,
 
 #' @rdname spseg
 #' @export
-plotcv <- function(obj, ...) plot(obj$h, obj$cv, type="l", ...)
+plotcv <- function(obj, ...) {
+  plot(obj$h, obj$cv, type="l", ...)
+  abline(v = obj$hcv, lty = "dashed", col = "red")
+}
 
-#' @importFrom ggplot2 ggplot aes geom_line
+#' @importFrom ggplot2 ggplot aes geom_line geom_vline
 #' @export
 ggplotcv <- function(obj, ...) {
   d <- with(
@@ -127,7 +130,8 @@ ggplotcv <- function(obj, ...) {
     data.frame(h = h, cv = cv)
   )
   ggplot(d, aes(h, cv)) +
-    geom_line()
+    geom_line() +
+    geom_vline(xintercept = obj$hcv, linetype = "dashed", color = "red")
 }
 
 #' @rdname spseg
