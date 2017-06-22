@@ -1,6 +1,6 @@
 Package: spatialkernel
-Version: 0.4-20
-Date: 2017-06-12
+Version: 0.4-21
+Date: 2017-06-22
 Title: Nonparameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Author: Pingping Zheng and Peter Diggle
