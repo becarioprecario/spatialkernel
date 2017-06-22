@@ -10,7 +10,7 @@ Authors@R: c(
     person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", c("aut", "cre")),
     person("Richard", "Cotton", , "richierocks@gmail.com", "ctb")
     )
-Maintainer: Richard Cotton <richierocks@gmail.com>
+Maintainer: Virgilio Gómez-Rubio <Virgilio.Gomez@uclm.es>
 URL: https://github.com/datacamp/spatialkernel
 BugReports: https://github.com/datacamp/spatialkernel/issues
 Depends: R (>= 1.9.0)
