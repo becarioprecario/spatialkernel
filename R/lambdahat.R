@@ -52,7 +52,7 @@
 #' Generator and Delaunay Triangulator} at
 #' \url{http://www-2.cs.cmu.edu/~quake/triangle.html}.
 #'   \item Alan Murta, \emph{General Polygon Clipper} at
-#' \url{http://www.cs.man.ac.uk/~toby/alan/software/\#gpc}.
+#' \url{http://www.cs.man.ac.uk/~toby/gpc}.
 #'   \item NAG's Numerical Library. \emph{Chapter 11: Quadrature}, NAG's Fortran
 #' 90 Library.
 #' \url{http://www.nag.co.uk/numeric/fn/manual/html/c11_fn03.html}
