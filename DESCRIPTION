@@ -1,16 +1,14 @@
 Package: spatialkernel
 Version: 0.4-21
-Date: 2017-06-22
+Date: 2017-07-31
 Title: Nonparameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
-Author: Pingping Zheng and Peter Diggle
 Authors@R: c(
-    person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", "aut"),
+    person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", c("aut", "cre")),
     person("Pingping", "Zheng", , "pingping.zheng@lancaster.ac.uk", "aut"),
-    person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", c("aut", "cre")),
+    person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", "aut"),
     person("Richard", "Cotton", , "richierocks@gmail.com", "ctb")
     )
-Maintainer: Virgilio Gómez-Rubio <Virgilio.Gomez@uclm.es>
 URL: https://github.com/datacamp/spatialkernel
 BugReports: https://github.com/datacamp/spatialkernel/issues
 Depends: R (>= 1.9.0)
@@ -23,6 +21,7 @@ Description: Edge-corrected kernel density estimation and binary kernel
         regression estimation for multivariate spatial point process
         data.
 License: file LICENSE
+Encoding: UTF-8
 NeedsCompilation: yes
 LazyData: true
 RoxygenNote: 6.0.1
