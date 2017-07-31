@@ -5,7 +5,7 @@ Title: Nonparameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Author: Pingping Zheng and Peter Diggle
 Authors@R: c(
-    person("Virgilio", "Gomez-Rubio", , "Virgilio.Gomez@uclm.es", "aut"),
+    person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", "aut"),
     person("Pingping", "Zheng", , "pingping.zheng@lancaster.ac.uk", "aut"),
     person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", c("aut", "cre")),
     person("Richard", "Cotton", , "richierocks@gmail.com", "ctb")
