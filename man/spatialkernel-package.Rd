@@ -43,7 +43,7 @@ For the convience of the user, we present here examples which show
   plot(h, cv, type="l")
   ## estimate type-specific probabilities and do segregation tests
   ## by one integrated function
-  sp <- spseg(pts, marks, hcv, opt=3, ntest=1000, poly=polyb)
+  sp <- spseg(pts, marks, hcv, opt=3, ntest=99, poly=polyb)
   ## plot estimated type-specific probability surfaces
   plotphat(sp)
   ## additional with pointwise significance contour lines
