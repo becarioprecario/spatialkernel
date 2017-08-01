@@ -1,5 +1,5 @@
 Package: spatialkernel
-Version: 0.4-21
+Version: 0.4-22
 Date: 2017-07-31
 Title: Nonparameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
@@ -17,6 +17,7 @@ Imports:
     grDevices,
     spatstat,
     stats
+Suggests: splancs
 Description: Edge-corrected kernel density estimation and binary kernel
         regression estimation for multivariate spatial point process
         data.
