@@ -18,4 +18,6 @@ addons:
 
 
 env:
-  - COMPILER=clang
+  - CC=clang -std=gnu99
+  - CXX=clang++
+  - CXX1X=clang++ -std=c++0x
