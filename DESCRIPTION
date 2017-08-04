@@ -29,7 +29,7 @@ Description: Edge-corrected kernel density estimation and binary kernel
         regression estimation for multivariate spatial point process
         data. For details, see Diggle, P.J., Zheng, P. and Durr, P. A. (2005)
         <doi:10.1111/j.1467-9876.2005.05373.x>.
-License: CC BY-NC-SA 3.0 + file LICENSE
+License: CC BY-NC-SA 4.0 + file LICENSE
 Encoding: UTF-8
 NeedsCompilation: yes
 LazyData: true
