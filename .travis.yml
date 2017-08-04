@@ -4,8 +4,6 @@ language: R
 sudo: false
 cache: packages
 
-language: c
-
 compiler:
   - clang
   - gcc
