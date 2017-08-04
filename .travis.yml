@@ -7,3 +7,15 @@ cache: packages
 compiler:
   - clang
   - gcc
+
+r:
+  - devel
+
+addons:
+  apt:
+    packages:
+      - clang
+
+
+env:
+  - COMPILER=clang
