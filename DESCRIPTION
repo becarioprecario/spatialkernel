@@ -1,17 +1,24 @@
 Package: spatialkernel
 Version: 0.4-22
-Date: 2017-07-31
+Date: 2017-08-04
 Title: Nonparameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Authors@R: c(
     person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", c("aut", "cre")),
-    person("Pingping", "Zheng", , "pingping.zheng@lancaster.ac.uk", "aut"),
-    person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", "aut"),
-    person("Richard", "Cotton", , "richierocks@gmail.com", "ctb")
+    person("Pingping", "Zheng", , , "aut"),
+    person("Peter", "Diggle", , "p.diggle@lancaster.ac.uk", c("aut", "cph")),
+    person("Richard", "Cotton", , "richierocks@gmail.com", "ctb"),
+    person("Alan", "Murta", , , c("ctb", "cph")),
+    person("Jonathan Richard", "Shewchuk", , , c("ctb", "cph")), 
+    person("Barry", "Rowlingson", , , c("ctb", "cph")),
+    person("Wm. Randolph", "Franklin", , , c("ctb", "cph"))
     )
-URL: https://github.com/datacamp/spatialkernel
-BugReports: https://github.com/datacamp/spatialkernel/issues
-Depends: R (>= 1.9.0)
+Copyright: 1997-1999 Advanced Interfaces Group, University of Manchester;
+  1993, 1995, 1997, 1998, 2002, 2005 Jonathan Richard Shewchuk;
+  1970-2003, Wm. Randolph Franklin
+URL: https://github.com/becarioprecario/spatialkernel
+BugReports: https://github.com/becarioprecario/spatialkernel/issues
+Depends: R (>= 2.10)
 Imports:
     graphics,
     grDevices,
@@ -20,8 +27,9 @@ Imports:
 Suggests: splancs
 Description: Edge-corrected kernel density estimation and binary kernel
         regression estimation for multivariate spatial point process
-        data.
-License: file LICENSE
+        data. For details, see Diggle, P.J., Zheng, P. and Durr, P. A. (2005)
+        <doi:10.1111/j.1467-9876.2005.05373.x>.
+License: CC BY-NC-SA 3.0 + file LICENSE
 Encoding: UTF-8
 NeedsCompilation: yes
 LazyData: true
