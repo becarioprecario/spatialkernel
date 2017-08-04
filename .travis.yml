@@ -17,3 +17,5 @@ addons:
       - clang
 
 
+before_install:
+  - source travis/before-install.sh
