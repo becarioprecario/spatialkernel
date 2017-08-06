@@ -2,7 +2,8 @@
 
 mkdir -p ~/.R
 
-echo "CC=clang -std=gnu99"      >> ~/.R/Makevars
+#echo "CC=clang -std=gnu99"      >> ~/.R/Makevars
+echo "CC=clang"      >> ~/.R/Makevars
 echo "CXX=clang++"              >> ~/.R/Makevars
 echo "CXX1X=clang++ -std=c++0x" >> ~/.R/Makevars
 
