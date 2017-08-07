@@ -1,7 +1,7 @@
 Package: spatialkernel
 Version: 0.4-22
-Date: 2017-08-06
-Title: Nonparameteric Estimation of Spatial Segregation in a
+Date: 2017-08-07
+Title: Non-parameteric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Authors@R: c(
     person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", c("aut", "cre")),
