@@ -1,7 +1,7 @@
 Package: spatialkernel
 Version: 0.4-22
 Date: 2017-08-07
-Title: Non-parameteric Estimation of Spatial Segregation in a
+Title: Non-Parametric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Authors@R: c(
     person("Virgilio", "Gómez-Rubio", , "Virgilio.Gomez@uclm.es", c("aut", "cre")),
@@ -11,12 +11,12 @@ Authors@R: c(
     person("Alan", "Murta", , , c("ctb", "cph")),
     person("Jonathan Richard", "Shewchuk", , , c("ctb", "cph")), 
     person("Barry", "Rowlingson", , , c("ctb", "cph")),
-    person("Wm. Randolph", "Franklin", , , c("ctb", "cph"))
+    person("Wm. Randolph", "Franklin", , , c("ctb", "cph")),
     person("David C.", "Sterratt", role=c("cph","aut"),
     email="david.c.sterratt@ed.ac.uk"),
     person("Elias", "Pipping", role=c("ctb")),
-    person("Roger D.", "Peng", , "rpeng@jhsph.edu", c("aut"))
-    person("Duncan", "Murdoch", , , c("aut"))
+    person("Roger D.", "Peng", , "rpeng@jhsph.edu", c("aut")),
+    person("Duncan", "Murdoch", , , c("aut")),
     person("Barry", "Rowlingson", , , c("aut"))
     )
 Copyright: 1991-3 Barry Rowlingson and Peter Diggle;
