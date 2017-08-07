@@ -5,6 +5,12 @@ This package includes files from the GPC library (files src/gpc.c and gpc.h)
 which is free for non-comercial use only. See
 http://www.cs.man.ac.uk/~toby/alan/software/.
 
+Updated versions of src/gpc.c and src/gpc.h have been copied from the gpclib
+package. Authors have been included in the DESCRIPTION.
+
+Updated versions of src/triangle.c and src/triangle.h have been copied
+from the Rtriangle package. Authors have been included in the DESCRIPTION.
+
 File src/pnp.f is under a MIT-like license.
 
 Files src/triangle.c and src/triangle.h are "freely available, copyrighted by

@@ -1,5 +1,9 @@
 Log file 
 
+Version 0.4-22
+Major changes in C and Fortran files.
+Several other fixes to make the package CRAN-suitable (check github repo).
+
 Version 0.4-6
 First publically available version from my webpage.
 Submitting to CRAN soon.
