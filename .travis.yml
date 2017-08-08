@@ -4,18 +4,6 @@ language: R
 sudo: false
 cache: packages
 
-compiler:
-  - clang
-  - gcc
-
 r:
   - devel
 
-addons:
-  apt:
-    packages:
-      - clang
-
-
-before_install:
-  - source travis/before-install.sh
