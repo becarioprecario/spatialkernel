@@ -1,6 +1,9 @@
 Log file 
 
 Version 0.4-22
+Added needed header in src/triangle.c.
+
+Version 0.4-22
 Major changes in C and Fortran files.
 Several other fixes to make the package CRAN-suitable (check github repo).
 
