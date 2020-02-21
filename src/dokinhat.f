@@ -377,7 +377,10 @@ C Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
 C R port: copyright 1998-2002 by Roger S. Bivand
 C x,y pts, z=lambda(x,y), xp, yp polygon
 
-      subroutine trykh(x,y,n,z,xp,yp,np,s,ns,hkhat,icounts,hkhats,nptns)
+C      subroutine trykh(x,y,n,z,xp,yp,np,s,ns,hkhat,icounts,hkhats,nptns)
+C     'k' is NOT used here
+C     ALSO it seems that this functions is used NOWHERE
+      subroutine trykh(x,y,n,xp,yp,np,s,ns,hkhat,icounts,hkhats,nptns)
 
       implicit real(8) (a-h,o-z)
       real(8) wij, wji
