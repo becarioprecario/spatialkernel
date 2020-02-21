@@ -76,45 +76,52 @@ C ..................................................................
 C 
 C NO REPEAT POINT IN (XX, YY); 
 C REPEAT THE FIRST POINT IN THIS SUBROUTINE AUTOMATICALLY;
-	SUBROUTINE PNPOLY(PX,PY,XX,YY,N,INOUT) 
-	REAL(8) X(3001),Y(3001),PX, PY, XX(N),YY(N) 
-	INTEGER N, INOUT
-	LOGICAL MX,MY,NX,NY 
-	MAXDIM=3000
-C	X(N+1) = X(1) OPTIONAL??
-C	Y(N+1) = Y(1) OPTIONAL??
-	IF(N.LE.MAXDIM)GO TO 6 	
-	INOUT=2
-	RETURN 
-6 	DO 1 I=1,N 
-	X(I)=XX(I)-PX 
-1 	Y(I)=YY(I)-PY 
-	INOUT=-1 
-	DO 2 I=1,N 
-	J=1+MOD(I,N) 
-	MX=X(I).GE.0.0 
-	NX=X(J).GE.0.0 
-	MY=Y(I).GE.0.0 
-	NY=Y(J).GE.0.0 
-	IF(.NOT.((MY.OR.NY).AND.(MX.OR.NX)).OR.(MX.AND.NX)) GO TO 2
-	IF(.NOT.(MY.AND.NY.AND.(MX.OR.NX).AND..NOT.(MX.AND.NX))) GO TO 3
-	INOUT=-INOUT 
-	GO TO 2 
-3 	IF((Y(I)*X(J)-X(I)*Y(J))/(X(J)-X(I))) 2,4,5 
-4 	INOUT=0 
-	RETURN 
-5 	INOUT=-INOUT 
-2 	CONTINUE 
-	RETURN 
-	END 
-C 	
-	SUBROUTINE PSNPOLY(PX,PY,PN,XX,YY,N,INOUT) 
-	INTEGER PN, N
-	REAL(8) XX(N),YY(N) 
-	REAL(8) PX(PN), PY(PN)
-	INTEGER INOUT(PN)
-	DO 1 I=1,PN
-	   CALL PNPOLY(PX(I),PY(I),XX,YY,N,INOUT(I))
- 1	CONTINUE
-	RETURN
-	END
+        SUBROUTINE PNPOLY(PX,PY,XX,YY,N,INOUT) 
+        REAL(8) X(3001),Y(3001),PX, PY, XX(N),YY(N) 
+        INTEGER N, INOUT
+        LOGICAL MX,MY,NX,NY 
+        MAXDIM=3000
+C        X(N+1) = X(1) OPTIONAL??
+C        Y(N+1) = Y(1) OPTIONAL??
+        IF(N.LE.MAXDIM) GO TO 6 
+        INOUT=2
+        RETURN 
+6         DO 1 I=1,N 
+        X(I)=XX(I)-PX 
+         Y(I)=YY(I)-PY 
+1        CONTINUE
+        INOUT=-1 
+        DO 2 I=1,N 
+        J=1+MOD(I,N) 
+        MX=X(I).GE.0.0 
+        NX=X(J).GE.0.0 
+        MY=Y(I).GE.0.0 
+        NY=Y(J).GE.0.0 
+        IF(.NOT.((MY.OR.NY).AND.(MX.OR.NX)).OR.(MX.AND.NX)) GO TO 2
+        IF(.NOT.(MY.AND.NY.AND.(MX.OR.NX).AND..NOT.(MX.AND.NX))) GO TO 3
+        INOUT=-INOUT 
+        GO TO 2 
+3         IF((Y(I)*X(J)-X(I)*Y(J))/(X(J)-X(I)).LT.0) THEN
+            GOTO 2
+          ELSE IF ((Y(I)*X(J)-X(I)*Y(J))/(X(J)-X(I)).EQ.0) THEN
+            GOTO 4
+          ELSE 
+            GOTO 5 
+          END IF
+4         INOUT=0 
+        RETURN 
+5         INOUT=-INOUT 
+2         CONTINUE 
+        RETURN 
+        END 
+C         
+        SUBROUTINE PSNPOLY(PX,PY,PN,XX,YY,N,INOUT) 
+        INTEGER PN, N
+        REAL(8) XX(N),YY(N) 
+        REAL(8) PX(PN), PY(PN)
+        INTEGER INOUT(PN)
+        DO 1 I=1,PN
+           CALL PNPOLY(PX(I),PY(I),XX,YY,N,INOUT(I))
+ 1        CONTINUE
+        RETURN
+        END
