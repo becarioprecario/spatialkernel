@@ -37,7 +37,7 @@ This function is provided here so that users do not need to load other
 This Fortran code comes from Wm Randolph Franklin,
   Electrical, Computer, and Systems Engineering Department,
   Rensselaer Polytechnic Institute, Troy, New York, at website 
-  \url{http://www.ecse.rpi.edu/Homepages/wrf}.
+  \url{https://wrf.ecse.rpi.edu/nikola/pages/}.
 }
 \seealso{
 \code{\link{phat}} and \code{\link{mcseg.test}}

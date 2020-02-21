@@ -4,8 +4,16 @@
 \alias{metre}
 \title{Plot Color Level Metre}
 \usage{
-metre(xl, yb, xr, yt, lab, cols = risk.colors(length(lab) - 1), shift = 0,
-  cex = 1)
+metre(
+  xl,
+  yb,
+  xr,
+  yt,
+  lab,
+  cols = risk.colors(length(lab) - 1),
+  shift = 0,
+  cex = 1
+)
 }
 \arguments{
 \item{xl}{Left coordinate of the color level metre bar.}

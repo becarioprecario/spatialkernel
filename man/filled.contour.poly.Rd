@@ -6,16 +6,38 @@
 This is a revised version of the \pkg{base} \R function 
   \code{\link{filled.contour}}. It additionally plots a polygonal boundary.}
 \usage{
-filled.contour.poly(x = seq(min(poly[, 1]), max(poly[, 1]), len = nrow(z)),
-  y = seq(min(poly[, 2]), max(poly[, 2]), len = ncol(z)), z, poly,
-  xlim = range(x, finite = TRUE), ylim = range(y, finite = TRUE),
-  zlim = range(z, finite = TRUE), levels = pretty(zlim, nlevels),
-  nlevels = 10, color.palette = risk.colors,
-  col = color.palette(length(levels) - 1), llevels = levels,
-  labels = NULL, labcex = 0.6, drawlabel = TRUE, method = "flattest",
-  vfont = c("sans serif", "plain"), lcol = par("fg"), lty = par("lty"),
-  lwd = par("lwd"), plot.title, plot.axes, key.title, key.axes, asp = NA,
-  xaxs = "i", yaxs = "i", las = 1, axes = TRUE, ...)
+filled.contour.poly(
+  x = seq(min(poly[, 1]), max(poly[, 1]), len = nrow(z)),
+  y = seq(min(poly[, 2]), max(poly[, 2]), len = ncol(z)),
+  z,
+  poly,
+  xlim = range(x, finite = TRUE),
+  ylim = range(y, finite = TRUE),
+  zlim = range(z, finite = TRUE),
+  levels = pretty(zlim, nlevels),
+  nlevels = 10,
+  color.palette = risk.colors,
+  col = color.palette(length(levels) - 1),
+  llevels = levels,
+  labels = NULL,
+  labcex = 0.6,
+  drawlabel = TRUE,
+  method = "flattest",
+  vfont = c("sans serif", "plain"),
+  lcol = par("fg"),
+  lty = par("lty"),
+  lwd = par("lwd"),
+  plot.title,
+  plot.axes,
+  key.title,
+  key.axes,
+  asp = NA,
+  xaxs = "i",
+  yaxs = "i",
+  las = 1,
+  axes = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{locations of grid lines at which the values in \code{z} are

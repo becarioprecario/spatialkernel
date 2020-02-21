@@ -55,7 +55,7 @@
 #' \url{http://www.cs.man.ac.uk/~toby/gpc}.
 #'   \item NAG's Numerical Library. \emph{Chapter 11: Quadrature}, NAG's Fortran
 #' 90 Library.
-#' \url{http://www.nag.co.uk/numeric/fn/manual/html/c11_fn03.html}
+#' \url{https://www.nag.co.uk/numeric/fn/manual/html/c11_fn04.html}
 #' }
 #' @note In principle, the \emph{double adaptive} double integration algorithm 
 #'   of Zheng, P. \emph{et\ al} (2004) can be applied to other kernel functions.

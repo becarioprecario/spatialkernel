@@ -11,16 +11,38 @@
 Spatial segregation analysis to be performed by a single function and
 presentations by associated \code{plot} functions.}
 \usage{
-\method{spseg}{matrix}(pts, marks, h, opt = 2, ntest = 100, poly = NULL,
-  delta = min(apply(apply(pts, 2, range), 2, diff))/100, proc = TRUE, ...)
+\method{spseg}{matrix}(
+  pts,
+  marks,
+  h,
+  opt = 2,
+  ntest = 100,
+  poly = NULL,
+  delta = min(apply(apply(pts, 2, range), 2, diff))/100,
+  proc = TRUE,
+  ...
+)
 
 plotcv(obj, ...)
 
-plotphat(obj, types = unique(obj$marks), sup = TRUE,
-  col = risk.colors(10), breaks = seq(0, 1, length = length(col) + 1), ...)
+plotphat(
+  obj,
+  types = unique(obj$marks),
+  sup = TRUE,
+  col = risk.colors(10),
+  breaks = seq(0, 1, length = length(col) + 1),
+  ...
+)
 
-plotmc(obj, types = unique(obj$marks), quan = c(0.05, 0.95), sup = FALSE,
-  col = risk.colors(10), breaks = seq(0, 1, length = length(col) + 1), ...)
+plotmc(
+  obj,
+  types = unique(obj$marks),
+  quan = c(0.05, 0.95),
+  sup = FALSE,
+  col = risk.colors(10),
+  breaks = seq(0, 1, length = length(col) + 1),
+  ...
+)
 
 spseg(pts, ...)
 
@@ -91,10 +113,6 @@ spseg results
 an spseg object
 }
 \description{
-Integrated Functions for Spatial Segregation Analysis
-Spatial segregation analysis to be performed by a single function and
-presentations by associated \code{plot} functions.
-
 Run the spatial segregation analysis
 
 spseg for spatstat objects
