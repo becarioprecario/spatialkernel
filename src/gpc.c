@@ -1035,15 +1035,21 @@ void gpc_free_polygon(gpc_polygon *p)
 void gpc_read_polygon(FILE *fp, int read_hole_flags, gpc_polygon *p)
 {
   int c, v;
+  int resf; /*Value return by fscanf*/
 
-  fscanf(fp, "%d", &(p->num_contours));
+  resf = fscanf(fp, "%d", &(p->num_contours));
+  if(resf == EOF)
+    error("\nError while reading data with fscanf in gpc_read_polygon.");
+
   MALLOC(p->hole, p->num_contours * sizeof(int),
          "hole flag array creation", int);
   MALLOC(p->contour, p->num_contours
          * sizeof(gpc_vertex_list), "contour creation", gpc_vertex_list);
   for (c= 0; c < p->num_contours; c++)
   {
-    fscanf(fp, "%d", &(p->contour[c].num_vertices));
+    resf = fscanf(fp, "%d", &(p->contour[c].num_vertices));
+  if(resf == EOF)
+    error("\nError while reading data with fscanf in gpc_read_polygon.");
 
     if (read_hole_flags)
       fscanf(fp, "%d", &(p->hole[c]));
@@ -1052,9 +1058,13 @@ void gpc_read_polygon(FILE *fp, int read_hole_flags, gpc_polygon *p)
 
     MALLOC(p->contour[c].vertex, p->contour[c].num_vertices
            * sizeof(gpc_vertex), "vertex creation", gpc_vertex);
-    for (v= 0; v < p->contour[c].num_vertices; v++)
-      fscanf(fp, "%lf %lf", &(p->contour[c].vertex[v].x),
+    for (v= 0; v < p->contour[c].num_vertices; v++) {
+      resf = fscanf(fp, "%lf %lf", &(p->contour[c].vertex[v].x),
                             &(p->contour[c].vertex[v].y));
+      if(resf == EOF)
+        error("\nError while reading data with fscanf in gpc_read_polygon.");
+    }
+
   }
 }
 
