@@ -13,17 +13,17 @@ C      parameter        (PI25DT = 3.141592653589793238462643d0)
 C      REAL(8) X, Y, X0, Y0, BH
       DOUBLE PRECISION X, Y, X0, Y0, BH
       INTEGER KER
-      ZZ=((X-X0)*(X-X0)+(Y-Y0)*(Y-Y0))/(BH*BH)
+      ZZ=SNGL( ((X-X0)*(X-X0)+(Y-Y0)*(Y-Y0))/(BH*BH) )
 C   KERNELS-- 1-GAUSSIAN, 2-QUADRATIC (Epanechnikov), 3-QUARTIC
 C   coefficients: 1/(2*pi); 2/pi; 3/pi;  
       IF (KER.EQ.1) THEN 
-         F = EXP(-ZZ/2.0)/(2.0*PI25DT*BH*BH)
+         F = SNGL( EXP(-ZZ/2.0)/(2.0*PI25DT*BH*BH) )
       ELSE IF(ZZ.GE.1.E0) THEN
          F = 0.
       ELSE IF (KER.EQ.2) THEN 
-         F = 2.0*(1.0-ZZ)/(PI25DT*BH*BH)
+         F = SNGL( 2.0*(1.0-ZZ)/(PI25DT*BH*BH) )
       ELSE
-         F = 3.0*(1.0-ZZ)*(1.0-ZZ)/(PI25DT*BH*BH)
+         F = SNGL(3.0*(1.0-ZZ)*(1.0-ZZ)/(PI25DT*BH*BH) )
       END IF
       RETURN
       END
@@ -171,9 +171,9 @@ C       AGAINST THE WELL-MEANING ACTIONS OF SOME OFFICIOUS OPTIMIZING
 C       FORTRAN COMPILERS.
       COMMON /CUBATB/ S, T
       REAL(8) X, A, Y, B
-      S = X + A
-      T = S - Y
-      RNDERR = T - B
+      S = SNGL( X + A )
+      T = SNGL( S - Y )
+      RNDERR = SNGL( T - B )
       RETURN
       END
 C
