@@ -22,3 +22,8 @@ You can install spatialkernel from github with:
 # install.packages("devtools")
 devtools::install_github("becarioprecario/spatialkernel")
 ```
+
+## Notes
+
+Version 0.4-24 includes some fixes in the Fortran code to remove warnings
+from the Fortran compiler.
