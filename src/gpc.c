@@ -1052,7 +1052,9 @@ void gpc_read_polygon(FILE *fp, int read_hole_flags, gpc_polygon *p)
     error("\nError while reading data with fscanf in gpc_read_polygon.");
 
     if (read_hole_flags)
-      fscanf(fp, "%d", &(p->hole[c]));
+      resf = fscanf(fp, "%d", &(p->hole[c]));
+      if(resf == EOF)
+        error("\nError while reading data with fscanf in gpc_read_polygon.");
     else
       p->hole[c]= FALSE; /* Assume all contours to be external */
 
