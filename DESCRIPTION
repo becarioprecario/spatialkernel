@@ -1,6 +1,6 @@
 Package: spatialkernel
-Version: 0.4-23
-Date: 2017-08-08
+Version: 0.4-24
+Date: 2020-02-21
 Title: Non-Parametric Estimation of Spatial Segregation in a
         Multivariate Point Process
 Authors@R: c(
@@ -41,4 +41,4 @@ License: CC BY-NC-SA 4.0
 Encoding: UTF-8
 NeedsCompilation: yes
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
