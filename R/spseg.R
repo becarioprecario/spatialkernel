@@ -203,7 +203,7 @@ spseg <- function(pts, ...){
 ##' @rdname spseg
 ##' @export
 spseg.ppp = function(pts, h, opt, ...){
-    pw = as.data.frame(spatstat::as.polygonal(pts$win))
+    pw = as.data.frame(spatstat.geom::as.polygonal(pts$win))
     if(ncol(pw)>2){
         stop("spseg can only handle simple ring windows")
     }
