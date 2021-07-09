@@ -31,6 +31,7 @@ Imports:
     graphics,
     grDevices,
     spatstat,
+    spatstat.geom,
     stats
 Suggests: splancs
 Description: Edge-corrected kernel density estimation and binary kernel
