@@ -203,14 +203,14 @@ spseg <- function(pts, ...){
 ##' @rdname spseg
 ##' @export
 spseg.ppp = function(pts, h, opt, ...){
-    pw = as.data.frame(spatstat::as.polygonal(pts$win))
+    pw = as.data.frame(spatstat.geom::as.polygonal(pts$win))
     if(ncol(pw)>2){
         stop("spseg can only handle simple ring windows")
     }
     
     xypoly = as.matrix(pw)
     xypts = cbind(pts$x, pts$y)
-    m = spatstat::marks(pts)
+    m = spatstat.geom::marks(pts)
     # test if only one mark
     m = as.character(m)
     spseg.matrix(xypts, m, h=h, opt=opt, poly=xypoly, ...)
